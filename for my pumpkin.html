@@ -1,0 +1,571 @@
+<!doctype html> 
+<html> 
+    <head><title>for my pumpkin</title>
+        <meta name="viewport"content="width:device-width",initial-scale="1"/>
+
+<style>
+    
+  #firepop {
+    display: none;
+  position: fixed; /* Changed to fixed so they cover the whole screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;    /* High number puts it in FRONT of the text and clock */
+  pointer-events: none;
+}
+/* The container for the firework */
+#firework5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  aspect-ratio: 1;
+  background: transparent;
+  /* We use box-shadow to create many sparks at once */
+  box-shadow: 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000, 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000;
+  animation: explode 2s infinite;
+}
+
+@keyframes explodebig {
+  0% {
+    /* All sparks start at the center */
+    box-shadow: 
+      0 0 #fff, 0 0 #fff, 0 0 #fff, 
+      0 0 #fff, 0 0 #fff, 0 0 #fff;
+  }
+  100% {
+    /* Sparks fly out to different coordinates and fade */
+    box-shadow: 
+      -100px -100px 0 0 rgba(255,0,0,0), 
+       100px -100px 0 0 rgba(255,255,0,0), 
+       0px -150px 0 0 rgba(0,255,0,0), 
+       -120px 50px 0 0 rgba(0,0,255,0), 
+       120px 50px 0 0 rgba(255,0,255,0), 
+       0px 150px 0 0 rgba(255,165,0,0);
+  }
+}
+  #firework2 {
+  position: absolute;
+  top: 20%;
+  left: 75%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  aspect-ratio: 1;
+  background: transparent;
+  /* We use box-shadow to create many sparks at once */
+  box-shadow: 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000, 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000;
+  animation: explode 2s infinite;
+}
+
+@keyframes explode {
+  0% {
+    /* All sparks start at the center */
+    box-shadow: 
+      0 0 #b7e023, 0 0 #1296a0, 0 0 #fff, 
+      0 0 #fff, 0 0 #fff, 0 0 #230981;
+  }
+  100% {
+    /* Sparks fly out to different coordinates and fade */
+    box-shadow: 
+      -100px -100px 0 0 rgba(255,0,0,0), 
+       100px -100px 0 0 rgba(255,255,0,0), 
+       0px -150px 0 0 rgba(0,255,0,0), 
+       -120px 50px 0 0 rgba(0,0,255,0), 
+       120px 50px 0 0 rgba(255,0,255,0), 
+       0px 150px 0 0 rgba(255,165,0,0);
+  }
+}
+  #firework1{
+  position: absolute;
+  top: 20%;
+  right: 75%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  aspect-ratio: 1;
+  background: transparent;
+  /* We use box-shadow to create many sparks at once */
+  box-shadow: 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000, 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000;
+  animation: explode 2s infinite;
+}
+
+@keyframes explode {
+  0% {
+    /* All sparks start at the center */
+    box-shadow: 
+      0 0 #b7e023, 0 0 #cc398f, 0 0 #fff, 
+      0 0 #fff, 0 0 #6dee78, 0 0 #57cca5;
+  }
+  100% {
+    /* Sparks fly out to different coordinates and fade */
+    box-shadow: 
+      -100px -100px 0 0 rgba(255,0,0,0), 
+       100px -100px 0 0 rgba(255,255,0,0), 
+       0px -150px 0 0 rgba(0,255,0,0), 
+       -120px 50px 0 0 rgba(0,0,255,0), 
+       120px 50px 0 0 rgba(255,0,255,0), 
+       0px 150px 0 0 rgba(255,165,0,0);
+  }
+}
+#firework3{
+   position: absolute;
+  top: 90%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  aspect-ratio: 1;
+  background: transparent;
+  animation-delay: var(--delay);
+
+
+  box-shadow: 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000, 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000;
+  animation: explode 2s infinite;
+ }
+
+@keyframes explode {
+  0% {
+    /* All sparks start at the center */
+    box-shadow: 
+      0 0 #b7e023, 0 0 #cc398f, 0 0 #fff, 
+      0 0 #fff, 0 0 #6dee78, 0 0 #57cca5;
+  }
+  100% {
+    /* Sparks fly out to different coordinates and fade */
+    box-shadow: 
+      -100px -100px 0 0 rgba(255,0,0,0), 
+       100px -100px 0 0 rgba(255,255,0,0), 
+       0px -150px 0 0 rgba(0,255,0,0), 
+       -120px 50px 0 0 rgba(0,0,255,0), 
+       120px 50px 0 0 rgba(255,0,255,0), 
+       0px 150px 0 0 rgba(255,165,0,0);
+  }
+}
+
+
+
+ #firework4 {
+  position: absolute;
+  top: 70%;
+  right: 75%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  z-index: 99;
+  aspect-ratio: 1;
+  background: transparent;
+  /* Increased spark count and added 2px blur */
+  animation: explode 2s infinite ease-out 0.5s;
+  
+}
+
+@keyframes explode {
+  0% {
+    /* Particles start tightly packed with a slight glow */
+    box-shadow: 
+      0 0 0px #b22dc4, 0 0 0px #fff, 0 0 0px #1582a3, 0 0 0px #fff,
+      0 0 0px #fff, 0 0 0px #b14444, 0 0 0px #fff, 0 0 0px #7ec72a,
+      0 0 0px #39157c, 0 0 0px #fff, 0 0 0px #3f0606, 0 0 0px #d45a74;
+  }
+  100% {
+    /* Particles spread further with a 2px blur and fade to transparent */
+    box-shadow: 
+      -120px -120px 2px rgba(255, 0, 0, 0), 
+       120px -120px 2px rgba(255, 255, 0, 0), 
+       0px -180px 2px rgba(0, 255, 0, 0), 
+      -150px 70px 2px rgba(0, 0, 255, 0), 
+       150px 70px 2px rgba(255, 0, 255, 0), 
+       0px 180px 2px rgba(255, 165, 0, 0),
+      -80px -150px 2px rgba(255, 255, 255, 0),
+       80px -150px 2px rgba(255, 50, 50, 0),
+      -180px 0px 2px rgba(100, 200, 255, 0),
+       180px 0px 2px rgba(200, 100, 255, 0),
+      -60px 160px 2px rgba(255, 200, 0, 0),
+       60px 160px 2px rgba(0, 255, 200, 0);
+  }
+}
+#firework6{
+  position: absolute;
+  top: 66%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  aspect-ratio: 1;
+  background: transparent;
+  animation-delay: var(--delay);
+  
+
+  box-shadow: 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000, 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000;
+  animation: explode 2s infinite;
+}
+
+@keyframes explode {
+  0% {
+    /* All sparks start at the center */
+    box-shadow: 
+      0 0 #b7e023, 0 0 #cc398f, 0 0 #fff, 
+      0 0 #fff, 0 0 #6dee78, 0 0 #57cca5;
+  }
+  100% {
+    /* Sparks fly out to different coordinates and fade */
+    box-shadow: 
+      -100px -100px 0 0 rgba(255,0,0,0), 
+       100px -100px 0 0 rgba(255,255,0,0), 
+       0px -150px 0 0 rgba(0,255,0,0), 
+       -120px 50px 0 0 rgba(0,0,255,0), 
+       120px 50px 0 0 rgba(255,0,255,0), 
+       0px 150px 0 0 rgba(255,165,0,0);
+  }
+}
+#firework7{
+   position: absolute;
+  top: 20%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  aspect-ratio: 1;
+  background: transparent;
+  animation-delay: var(--delay);
+
+
+  box-shadow: 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000, 
+    0 0 #ff0000, 0 0 #ff0000, 0 0 #ff0000;
+  animation: explode 2s infinite;
+ }
+
+@keyframes explode {
+  0% {
+    /* All sparks start at the center */
+    box-shadow: 
+      0 0 #b7e023, 0 0 #cc398f, 0 0 #fff, 
+      0 0 #fff, 0 0 #6dee78, 0 0 #57cca5;
+  }
+  100% {
+    /* Sparks fly out to different coordinates and fade */
+    box-shadow: 
+      -100px -100px 0 0 rgba(255,0,0,0), 
+       100px -100px 0 0 rgba(255,255,0,0), 
+       0px -150px 0 0 rgba(0,255,0,0), 
+       -120px 50px 0 0 rgba(0,0,255,0), 
+       120px 50px 0 0 rgba(255,0,255,0), 
+       0px 150px 0 0 rgba(255,165,0,0);
+  }
+}
+
+
+
+  
+
+/* 2. The Firework Particle */
+
+
+#clock {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-top: 3%;
+  transition: all 0.5s ease;
+  box-shadow: 4px 4px 3px;
+  padding: 5px 4px;
+  border: 1px;
+  height: fit-content;
+  width: fit-content;
+  align-items: center;
+  border-radius: 20px;
+}
+
+
+
+p{
+    
+    text-align: justify;
+    margin-bottom: 5%;
+    height:100%;
+    font-size: 30px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    color: #e6d5df;
+    top: 0%;
+    box-sizing:border-box;
+    box-shadow: 4px 3px 4px grey;
+    justify-content:first baselise;
+    background-color:transparent;
+border-radius: 20px;
+
+
+
+    
+    
+}
+
+
+body{
+  background-color: rgb(13, 13, 14);
+  color:#fff;
+  justify-content:center;
+  font-size: 20px;
+  
+  font-family:  Arial;
+  height: auto;
+  align-items: center;
+  
+}
+h1,h2{
+  color: #fff;
+  text-align: center;
+}
+form{
+  color: white;
+  margin-left: 40%;
+}
+
+button {
+   
+    height: 50%;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    border-color: #dad4e4;
+    border: 1px solid grey;
+    background-color: transparent;
+    box-shadow: 4px 4px 3px grey;
+    
+
+}
+
+#firepop2 {
+  display: none; /* Hidden until countdown ends */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.firepop2-background {
+  position: absolute;
+  width: 5px;
+  aspect-ratio: 1;
+  background: transparent;
+  border-radius: 50%;
+  animation: explode 2s ease-out infinite;
+}
+
+@keyframes explode {
+  0% {
+    box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    /* This creates the outward burst effect */
+    box-shadow: 
+      -80px -80px 2px rgba(153, 139, 139, 0), 
+       80px -80px 2px rgba(255, 255, 0, 0), 
+       0px -120px 2px rgba(0, 255, 0, 0), 
+      -100px 50px 2px rgba(0, 0, 255, 0), 
+       100px 50px 2px rgba(255, 0, 255, 0), 
+       0px 120px 2px rgba(255, 165, 0, 0);
+    transform: scale(1.5);
+    opacity: 0;
+     filter:
+    drop-shadow(0 0 6px rgba(255,255,255,0.9))
+    drop-shadow(0 0 12px rgba(255,200,200,0.7))
+    drop-shadow(0 0 20px rgba(255,100,100,0.5));
+  }
+}
+input{ 
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid;
+}
+
+</style>
+    </head>
+    <body> 
+      
+  
+<audio id="fireworkSound" autoplay loop>
+  <source src="pouf-salon.fr - Motion Graphics Animated Fireworks Background with Sound Effect (320 KBps) (1).mp3" type="audio/mp3">
+
+</audio>
+
+</div>
+
+ <div id="firepop2">
+  </div>
+ 
+  
+  
+  
+
+  <main class="content">
+
+        
+    <center>
+        <h1> 
+            &#127878; happy new year pumpkin  &#127878;
+        </h1>
+        <br/>
+        <br/>
+       
+      </center>
+<div id="look">
+  <p><b>happy Year and happy anniversary</b> pumpkin 
+I might not be a believer but I thank whoever was behind us meeting.<br/> 
+I'm happy the Gods spared me from heartbreaks by giving me my soulmate right away.
+We've faced the odds over and over again. 
+And proven that we'll fight to continue holding on to eachother. 
+We've wrapped up the year with wonderful and sad memories... With laughter and sadness. 
+There were moments where we had arguments back to back but there were times where beautiful moments overweights the bad times. 
+Everytime I think about how I'm the happiest guy with you. 
+You've become my comfort zone, my way of life, My reason for living. 
+I enjoyed our cute letter exchange on our Monthsary.. it made me feel appreciated...I've saved them all since the first official confession and I'll continue saving those wonderful letters that awaits me. 
+I enjoy our calls wether it's voice call or video call 
+Whether it's for hours or just a few min. 
+Whether its cus of an argument or just quality time. 
+Every moment with you fills me with joy. 
+But I know I also made you shed tears from time to time 
+And hubby wanna apologize for making u cry 
+I wanna apologize for not being the best hubby to u from time to time. 
+I wanna apologize for making you feel alone in the relationship. 
+I apologize for making you get a heavy heart.
+Each day I try my best to be the best version of myself to u. yet i fail todo so from time to time 
+But I wanna say I'm really happy for the things you've taught me last year ... 
+I'm not ashamed to say I've learned a lot from u and willing to learn more. 
+<b>i love you so so much pumpkin. </b> </p>
+  
+</div>
+<button onclick="hide()">Hide</button>
+<button onclick="show()">Show</button>
+
+  <div id="clock">00:10</div>
+
+
+<script> 
+  function show(){
+    document.getElementById("look").style.display="block";
+  }
+  function hide(){
+    document.getElementById("look").style.display="none";
+  }
+</script>
+
+<div id="firepop">
+<div class="firework1"></div>
+<div class="firework2"></div>
+<div class="firework3"></div>
+<div class="firework4"></div>
+<div class="firework5"></div>
+<div class="firework6"></div>
+<div class="firework7"></div>
+
+
+  
+</div>
+<script>
+let timeLeft = 10; 
+const clockElement = document.getElementById("clock");
+const firepop = document.getElementById("firepop");
+const sound = document.getElementById("fireworkSound");
+const firepop2Container = document.getElementById("firepop2");
+
+
+
+ 
+
+
+const countdown = setInterval(() => {
+  timeLeft--;
+  clockElement.innerText = `00:${timeLeft < 10 ? '0' + timeLeft : timeLeft}`;
+
+  if (timeLeft <= 0) {
+    clearInterval(countdown);
+    clockElement.innerText = "HAPPY NEW YEAR pumpkin and HAPPY MONTHSARY!";
+    
+    // FIXED: This name must match the function name below
+    showFirepop(); 
+  }
+}, 1000);
+
+// This function makes the hidden stage 
+function showFirepop() {
+  // This will now find the ID and change 'none' to 'block'
+  document.getElementById("firepop").style.display = "block";
+  document.getElementById("firepop2").style.display = "block";
+  firepop2Container.style.display = "block";
+
+  sound.play();
+  // Create 15 random fireworks
+  for (let i = 0; i < 15; i++) {
+    createFirepop2();
+  }
+}
+
+function createFirepop2() {
+  const f = document.createElement("div");
+  f.className = "firepop2-background";
+  
+  // Random Position
+  const top = Math.random() * 80 + 10; // Between 10% and 90%
+  const left = Math.random() * 80 + 10;
+  
+  // Random Delay so they don't all pop at the exact same time
+  const delay = Math.random() * 2; 
+
+  f.style.top = top + "%";
+  f.style.left = left + "%";
+  f.style.animationDelay = delay + "s";
+  
+  firepop2Container.appendChild(f);
+}
+
+
+
+
+
+
+
+
+
+</script>
+<br/>
+
+
+<br/>
+
+
+<h2>shall we go into 2026 together?</h2>
+ <form action="https://formspree.io/f/mqekvyae" method="POST">
+  <label>Your answer:</label>
+  <input type="text" name="message" required>
+  
+  <button type="submit">Send</button>
+</form>
+        
+
+    </body>
+</html>
